@@ -1,0 +1,85 @@
+{
+  "alice.nguyen@acme.example": {
+    "name": "Alice Nguyen",
+    "employee_type": "full_time",
+    "department": "Marketing",
+    "manager": "carmen.diaz@acme.example",
+    "training_current": true,
+    "hr_flag": false,
+    "mfa_enrolled": true,
+    "recently_revoked": []
+  },
+  "bob.singh@acme.example": {
+    "name": "Bob Singh",
+    "employee_type": "full_time",
+    "department": "Engineering",
+    "manager": "diane.klein@acme.example",
+    "training_current": true,
+    "hr_flag": false,
+    "mfa_enrolled": true,
+    "recently_revoked": []
+  },
+  "carmen.diaz@acme.example": {
+    "name": "Carmen Diaz",
+    "employee_type": "full_time",
+    "department": "Marketing",
+    "manager": "cmo@acme.example",
+    "training_current": true,
+    "hr_flag": false,
+    "mfa_enrolled": true,
+    "recently_revoked": []
+  },
+  "diane.klein@acme.example": {
+    "name": "Diane Klein",
+    "employee_type": "full_time",
+    "department": "Engineering",
+    "manager": "vp.engineering@acme.example",
+    "training_current": true,
+    "hr_flag": false,
+    "mfa_enrolled": true,
+    "recently_revoked": []
+  },
+  "evan.park@acme.example": {
+    "name": "Evan Park",
+    "employee_type": "contractor",
+    "department": "Engineering",
+    "manager": "diane.klein@acme.example",
+    "training_current": true,
+    "hr_flag": false,
+    "mfa_enrolled": true,
+    "recently_revoked": []
+  },
+  "fiona.reed@acme.example": {
+    "name": "Fiona Reed",
+    "employee_type": "full_time",
+    "department": "Finance",
+    "manager": "cfo@acme.example",
+    "training_current": true,
+    "hr_flag": false,
+    "mfa_enrolled": true,
+    "recently_revoked": [],
+    "current_groups": ["Finance-Approvers"]
+  },
+  "gus.olsen@acme.example": {
+    "name": "Gus Olsen",
+    "employee_type": "full_time",
+    "department": "Sales",
+    "manager": "vp.sales@acme.example",
+    "training_current": false,
+    "hr_flag": false,
+    "mfa_enrolled": true,
+    "recently_revoked": []
+  },
+  "hana.kim@acme.example": {
+    "name": "Hana Kim",
+    "employee_type": "full_time",
+    "department": "Engineering",
+    "manager": "diane.klein@acme.example",
+    "training_current": true,
+    "hr_flag": false,
+    "mfa_enrolled": true,
+    "recently_revoked": [
+      {"group": "Engineering-Secrets", "date": "2026-04-10", "reason": "for_cause"}
+    ]
+  }
+}

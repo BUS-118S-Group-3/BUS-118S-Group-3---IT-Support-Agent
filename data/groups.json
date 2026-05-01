@@ -1,0 +1,183 @@
+{
+  "Marketing-Public": {
+    "risk_tier": "low",
+    "path": "\\\\fs01\\shared\\marketing\\public",
+    "data_owner": "marketing.ops@acme.example",
+    "allowed_departments": [
+      "*"
+    ],
+    "tags": [],
+    "members": [
+      "alice.nguyen@acme.example",
+      "carmen.diaz@acme.example"
+    ]
+  },
+  "Marketing-Campaigns": {
+    "risk_tier": "medium",
+    "path": "\\\\fs01\\shared\\marketing\\campaigns",
+    "data_owner": "cmo@acme.example",
+    "allowed_departments": [
+      "Marketing",
+      "Sales",
+      "Product"
+    ],
+    "tags": [],
+    "members": [
+      "carmen.diaz@acme.example"
+    ]
+  },
+  "Engineering-Source": {
+    "risk_tier": "medium",
+    "path": "\\\\fs01\\shared\\engineering\\source",
+    "data_owner": "vp.engineering@acme.example",
+    "allowed_departments": [
+      "Engineering",
+      "Security"
+    ],
+    "tags": [],
+    "members": [
+      "bob.singh@acme.example",
+      "diane.klein@acme.example",
+      "hana.kim@acme.example",
+      "alice.nguyen@acme.example"
+    ]
+  },
+  "Engineering-Secrets": {
+    "risk_tier": "high",
+    "path": "\\\\fs01\\shared\\engineering\\secrets",
+    "data_owner": "ciso@acme.example",
+    "allowed_departments": [
+      "Security",
+      "Platform"
+    ],
+    "tags": [
+      "employees-only"
+    ],
+    "members": []
+  },
+  "Finance-Reports": {
+    "risk_tier": "high",
+    "path": "\\\\fs01\\shared\\finance\\reports",
+    "data_owner": "cfo@acme.example",
+    "allowed_departments": [
+      "Finance",
+      "Executive"
+    ],
+    "tags": [],
+    "members": []
+  },
+  "Finance-Approvers": {
+    "risk_tier": "restricted",
+    "path": null,
+    "data_owner": "cfo@acme.example",
+    "allowed_departments": [
+      "Finance"
+    ],
+    "tags": [
+      "sox"
+    ],
+    "mutually_exclusive_with": [
+      "Finance-Reports"
+    ],
+    "members": [
+      "fiona.reed@acme.example"
+    ]
+  },
+  "Legal-Contracts": {
+    "risk_tier": "high",
+    "path": "\\\\fs01\\shared\\legal\\contracts",
+    "data_owner": "general.counsel@acme.example",
+    "allowed_departments": [
+      "Legal",
+      "Executive"
+    ],
+    "tags": [
+      "employees-only"
+    ],
+    "members": []
+  },
+  "Payroll-PII": {
+    "risk_tier": "restricted",
+    "path": "\\\\fs01\\shared\\hr\\payroll",
+    "data_owner": "chro@acme.example",
+    "allowed_departments": [
+      "HR-Payroll"
+    ],
+    "tags": [
+      "employees-only",
+      "pii",
+      "sox"
+    ],
+    "mutually_exclusive_with": [
+      "Payroll-Approvers"
+    ],
+    "members": []
+  },
+  "Payroll-Approvers": {
+    "risk_tier": "restricted",
+    "path": null,
+    "data_owner": "chro@acme.example",
+    "allowed_departments": [
+      "HR-Payroll"
+    ],
+    "tags": [
+      "sox"
+    ],
+    "mutually_exclusive_with": [
+      "Payroll-PII"
+    ],
+    "members": []
+  },
+  "Sales-Pipeline": {
+    "risk_tier": "medium",
+    "path": "\\\\fs01\\shared\\sales\\pipeline",
+    "data_owner": "vp.sales@acme.example",
+    "allowed_departments": [
+      "Sales",
+      "Marketing",
+      "Executive"
+    ],
+    "tags": [],
+    "members": []
+  },
+  "Sales-Customer-Lists": {
+    "risk_tier": "high",
+    "path": "\\\\fs01\\shared\\sales\\customer-lists",
+    "data_owner": "vp.sales@acme.example",
+    "allowed_departments": [
+      "Sales",
+      "Customer-Success"
+    ],
+    "tags": [
+      "pii"
+    ],
+    "members": []
+  },
+  "Audit-Read": {
+    "risk_tier": "high",
+    "path": null,
+    "data_owner": "ciso@acme.example",
+    "allowed_departments": [
+      "Audit",
+      "Compliance"
+    ],
+    "tags": [],
+    "mutually_exclusive_with": [
+      "AD-Admins"
+    ],
+    "members": []
+  },
+  "AD-Admins": {
+    "risk_tier": "restricted",
+    "path": null,
+    "data_owner": "ciso@acme.example",
+    "allowed_departments": [
+      "IT"
+    ],
+    "tags": [],
+    "mutually_exclusive_with": [
+      "Audit-Read"
+    ],
+    "members": []
+  }
+}
